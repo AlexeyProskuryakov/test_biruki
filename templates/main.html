@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+{% block head %}
+    <head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+        <title>Airports</title>
+    </head>
+{% endblock %}
+
+{% block data %}
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Countries</h3>
+                    </div>
+                </div>
+                {% for country in countries %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="/country/{{ country.id }}"> {{ country.name }} </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Cities</h3>
+                    </div>
+                </div>
+                {% for city in cities %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="/city/{{ city.id }}"> {{ city.name }} </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Airports</h3>
+                    </div>
+                </div>
+                {% for airport in airports %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="/airport/{{ airport.id }}"> {{ airport.name }} </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}
+</html>

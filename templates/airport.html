@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+{% block data %}
+    <body>
+    <h4><a href="/">home</a></h4>
+
+    <h3><a href="/country/{{ country.id }}">{{ country.name }}</a></h3>
+
+    <h2><a href="/city/{{ airport.city.id }}">{{ airport.city.name }}</a></h2>
+
+    <h1>{{ airport.name }}</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>IATA:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.iata }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>ICAO:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.icao }} </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>AMCL:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.amcl }} ft</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>UTC:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.utc }} h</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Longitude:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.longitude }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Latitude:</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.latitude }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h5>xz</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>{{ airport.xz }}</h5>
+            </div>
+        </div>
+
+    </div>
+    </body>
+{% endblock %}

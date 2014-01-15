@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block data %}
+    <body>
+    <h4><a href="/">home</a></h4>
+    <h3> <a href="/country/{{ city.country.id }}">{{ city.country.name }}</a></h3>
+    <h1> {{ city.name }}</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Airports</h3>
+                    </div>
+                </div>
+                {% for airport in airports %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="/airport/{{ airport.id }}"> {{ airport.name }} </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}
